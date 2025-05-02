@@ -1,4 +1,4 @@
-import UploadUI from '@/components/UploadUi';
+import UploadUI from '../components/UploadUi';
 
 export default function Home() {
   return (

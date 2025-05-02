@@ -1,10 +1,10 @@
-// app/layout.tsx
-
 import type { Metadata } from 'next';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export const metadata: Metadata = {
-  title: 'Upload App',
-  description: 'UploadThing в Next.js App Router',
+  title: 'Task App',
+  description: 'A simple task app',
 };
 
 export default function RootLayout({

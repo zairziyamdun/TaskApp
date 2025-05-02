@@ -25,6 +25,10 @@ exports.login = async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ error: "Пользователь не найден" });
 
+    if (user.isBlocked) {
+        return res.status(403).json({ error: "Аккаунт заблокирован администратором" });
+    }
+
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(401).json({ error: "Неверный пароль" });
 

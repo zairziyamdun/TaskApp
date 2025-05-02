@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { UploadButton } from '@/utils/uploadthing';
+import { UploadButton } from '../utils/uploadthing';
 
 export default function UploadUI() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);

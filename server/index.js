@@ -14,6 +14,9 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/projects", require("./routes/projects"));
 app.use("/api/projects/:projectId/tasks", require("./routes/tasks"));
+app.use("/api/admin", require("./routes/admin"));
+app.use("/api/user", require("./routes/user"));
+
 
 const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));

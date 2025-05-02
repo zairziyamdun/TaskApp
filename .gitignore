@@ -1,0 +1,10 @@
+node_modules
+.env
+.env.local
+client-f/node_modules
+server/node_modules
+
+client-f/.env.local
+client-f/.next
+server/.next
+server/.env
